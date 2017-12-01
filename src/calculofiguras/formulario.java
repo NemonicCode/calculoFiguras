@@ -5,6 +5,7 @@
  */
 package calculofiguras;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -18,6 +19,7 @@ public class formulario extends javax.swing.JFrame {
     int num1 = 0;
     int num2 = 0;
     int lado;
+    DecimalFormat df = new DecimalFormat("#.00");
 
     public formulario() {
         initComponents();
@@ -56,6 +58,7 @@ public class formulario extends javax.swing.JFrame {
         valor1Triangulo.setText(null);
         valor2Triangulo.setText(null);
         resultadoTriangulo.setText(null);
+
     }
 
     public void borrarStringCirculo() {
@@ -102,12 +105,12 @@ public class formulario extends javax.swing.JFrame {
     public void panelCirculo() {
         panelCuadrado.setVisible(false);
         this.remove(panelCuadrado);
-        panelCirculo.setVisible(false);
-        this.remove(panelCirculo);
+        panelPrincipal.setVisible(false);
+        this.remove(panelPrincipal);
         panelTriangulo.setVisible(false);
         this.remove(panelTriangulo);
-        this.add(panelPrincipal);
-        panelPrincipal.setVisible(true);
+        panelCirculo.setVisible(true);
+        this.add(panelCirculo);
     }
 
     /**
@@ -119,6 +122,20 @@ public class formulario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelCirculo = new javax.swing.JPanel();
+        b3Inicio = new javax.swing.JButton();
+        b3Cuadrado = new javax.swing.JButton();
+        b3Triangulo = new javax.swing.JButton();
+        calcCirculo = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        resultadoCirculo = new javax.swing.JTextField();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        valor1Circulo = new javax.swing.JTextField();
         panelTriangulo = new javax.swing.JPanel();
         b2Inicio = new javax.swing.JButton();
         b2Cuadrado = new javax.swing.JButton();
@@ -130,6 +147,8 @@ public class formulario extends javax.swing.JFrame {
         rectangulo = new javax.swing.JLabel();
         equilatero = new javax.swing.JLabel();
         isosceles = new javax.swing.JLabel();
+        imagenesFormulas = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         valor1Triangulo = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
@@ -160,15 +179,144 @@ public class formulario extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         valor1Cuadrado = new javax.swing.JTextField();
         resultadoCuadrado = new javax.swing.JTextField();
-        panelCirculo = new javax.swing.JPanel();
-        b3Inicio = new javax.swing.JButton();
-        b3Cuadrado = new javax.swing.JButton();
-        b3Triangulo = new javax.swing.JButton();
-        calcCirculo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 350));
         getContentPane().setLayout(null);
+
+        b3Inicio.setText("Principal");
+        b3Inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3InicioActionPerformed(evt);
+            }
+        });
+
+        b3Cuadrado.setText("Cuadrado");
+        b3Cuadrado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3CuadradoActionPerformed(evt);
+            }
+        });
+
+        b3Triangulo.setText("Triangulo");
+        b3Triangulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3TrianguloActionPerformed(evt);
+            }
+        });
+
+        calcCirculo.setText("Calcular");
+        calcCirculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcCirculoActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/circulo.png"))); // NOI18N
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cuadrado.png"))); // NOI18N
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trianguloEquilatero.png"))); // NOI18N
+
+        jLabel18.setText("Area");
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/formulaCirculo.png"))); // NOI18N
+
+        jLabel20.setText("Radio");
+
+        javax.swing.GroupLayout panelCirculoLayout = new javax.swing.GroupLayout(panelCirculo);
+        panelCirculo.setLayout(panelCirculoLayout);
+        panelCirculoLayout.setHorizontalGroup(
+            panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCirculoLayout.createSequentialGroup()
+                .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelCirculoLayout.createSequentialGroup()
+                        .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelCirculoLayout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(b3Inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCirculoLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelCirculoLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel16)
+                                    .addGroup(panelCirculoLayout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(b3Cuadrado)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelCirculoLayout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(b3Triangulo))
+                                    .addComponent(jLabel17)))
+                            .addGroup(panelCirculoLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel19)
+                                .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelCirculoLayout.createSequentialGroup()
+                                        .addGap(49, 49, 49)
+                                        .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel20)
+                                            .addComponent(jLabel18)))
+                                    .addGroup(panelCirculoLayout.createSequentialGroup()
+                                        .addGap(28, 28, 28)
+                                        .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(valor1Circulo, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(resultadoCirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(panelCirculoLayout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(calcCirculo))))
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelCirculoLayout.setVerticalGroup(
+            panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCirculoLayout.createSequentialGroup()
+                .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(panelCirculoLayout.createSequentialGroup()
+                            .addGap(50, 50, 50)
+                            .addComponent(calcCirculo)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel19)
+                            .addGap(18, 18, 18))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCirculoLayout.createSequentialGroup()
+                            .addGap(16, 16, 16)
+                            .addComponent(jLabel20)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(valor1Circulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(resultadoCirculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(30, 30, 30)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCirculoLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)))
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCirculoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(b3Inicio)
+                        .addGap(88, 88, 88))
+                    .addGroup(panelCirculoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(b3Cuadrado)
+                            .addComponent(b3Triangulo))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+
+        getContentPane().add(panelCirculo);
+        panelCirculo.setBounds(0, 0, 400, 300);
 
         b2Inicio.setText("Principal");
         b2Inicio.addActionListener(new java.awt.event.ActionListener() {
@@ -219,6 +367,17 @@ public class formulario extends javax.swing.JFrame {
         imagenesTriangulo.add(isosceles);
         isosceles.setBounds(0, 0, 91, 93);
 
+        javax.swing.GroupLayout imagenesFormulasLayout = new javax.swing.GroupLayout(imagenesFormulas);
+        imagenesFormulas.setLayout(imagenesFormulasLayout);
+        imagenesFormulasLayout.setHorizontalGroup(
+            imagenesFormulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        imagenesFormulasLayout.setVerticalGroup(
+            imagenesFormulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+        );
+
         jLabel8.setText("Altura");
 
         jLabel9.setText("Base");
@@ -244,7 +403,9 @@ public class formulario extends javax.swing.JFrame {
                 .addContainerGap(43, Short.MAX_VALUE))
             .addGroup(panelTrianguloLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(imagenesTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(imagenesTriangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                    .addComponent(imagenesFormulas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(34, 34, 34)
                 .addGroup(panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(calTriangulo)
@@ -271,26 +432,31 @@ public class formulario extends javax.swing.JFrame {
         panelTrianguloLayout.setVerticalGroup(
             panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTrianguloLayout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addGroup(panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(panelTrianguloLayout.createSequentialGroup()
-                            .addComponent(calTriangulo)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(imagenesTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelTrianguloLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addGap(8, 8, 8)
+                        .addGroup(panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panelTrianguloLayout.createSequentialGroup()
+                                .addComponent(calTriangulo)
+                                .addGap(49, 49, 49)
+                                .addComponent(comboTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelTrianguloLayout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(valor1Triangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(valor2Triangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel10)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(valor1Triangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(resultadoTriangulo))
+                    .addGroup(panelTrianguloLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imagenesTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(valor2Triangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(resultadoTriangulo)
+                        .addComponent(imagenesFormulas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelTrianguloLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -306,7 +472,7 @@ public class formulario extends javax.swing.JFrame {
                 .addGroup(panelTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(b3Circulo)
                     .addComponent(b2Cuadrado))
-                .addGap(187, 187, 187))
+                .addGap(199, 199, 199))
         );
 
         getContentPane().add(panelTriangulo);
@@ -517,82 +683,14 @@ public class formulario extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(b1Inicio)
                         .addGap(28, 28, 28)))
-                .addGroup(panelCuadradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(b2Circulo)
-                    .addComponent(b2Triangulo))
+                .addGroup(panelCuadradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(b2Triangulo)
+                    .addComponent(b2Circulo))
                 .addGap(20, 20, 20))
         );
 
         getContentPane().add(panelCuadrado);
         panelCuadrado.setBounds(0, 0, 400, 300);
-
-        b3Inicio.setText("jButton1");
-        b3Inicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b3InicioActionPerformed(evt);
-            }
-        });
-
-        b3Cuadrado.setText("jButton3");
-        b3Cuadrado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b3CuadradoActionPerformed(evt);
-            }
-        });
-
-        b3Triangulo.setText("jButton2");
-        b3Triangulo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b3TrianguloActionPerformed(evt);
-            }
-        });
-
-        calcCirculo.setText("jButton4");
-        calcCirculo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calcCirculoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panelCirculoLayout = new javax.swing.GroupLayout(panelCirculo);
-        panelCirculo.setLayout(panelCirculoLayout);
-        panelCirculoLayout.setHorizontalGroup(
-            panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-            .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelCirculoLayout.createSequentialGroup()
-                    .addGap(31, 31, 31)
-                    .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(b3Triangulo)
-                        .addGroup(panelCirculoLayout.createSequentialGroup()
-                            .addGap(264, 264, 264)
-                            .addComponent(b3Inicio))
-                        .addGroup(panelCirculoLayout.createSequentialGroup()
-                            .addGap(125, 125, 125)
-                            .addComponent(b3Cuadrado)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(calcCirculo)
-                            .addGap(14, 14, 14)))
-                    .addGap(32, 32, 32)))
-        );
-        panelCirculoLayout.setVerticalGroup(
-            panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-            .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelCirculoLayout.createSequentialGroup()
-                    .addGap(58, 58, 58)
-                    .addComponent(b3Inicio)
-                    .addGap(108, 108, 108)
-                    .addComponent(b3Triangulo)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(panelCirculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(b3Cuadrado)
-                        .addComponent(calcCirculo))
-                    .addContainerGap(59, Short.MAX_VALUE)))
-        );
-
-        getContentPane().add(panelCirculo);
-        panelCirculo.setBounds(0, 0, 400, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -637,17 +735,19 @@ public class formulario extends javax.swing.JFrame {
     private void b2InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2InicioActionPerformed
         panelPrincipal();
         borrarStringTriangulo();
-
+        comboTriangulo.setSelectedIndex(0);
     }//GEN-LAST:event_b2InicioActionPerformed
 
     private void b2CuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2CuadradoActionPerformed
         panelCuadrado();
         borrarStringTriangulo();
+        comboTriangulo.setSelectedIndex(0);
     }//GEN-LAST:event_b2CuadradoActionPerformed
 
     private void b3CirculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3CirculoActionPerformed
         panelCirculo();
         borrarStringTriangulo();
+        comboTriangulo.setSelectedIndex(0);
     }//GEN-LAST:event_b3CirculoActionPerformed
 
     private void calTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calTrianguloActionPerformed
@@ -659,9 +759,14 @@ public class formulario extends javax.swing.JFrame {
         }
         if (comboTriangulo.getSelectedIndex() == 1) {
             num1 = Integer.parseInt(valor1Triangulo.getText());
+            formula.formulaTrianEquilatero(num1);
+            resultadoTriangulo.setText(String.valueOf(df.format(formula.getArea())));
+        }
+        if (comboTriangulo.getSelectedIndex() == 2) {
+            num1 = Integer.parseInt(valor1Triangulo.getText());
             num2 = Integer.parseInt(valor2Triangulo.getText());
-            formula.formulaTrianRectangulo(num1, num2);
-            resultadoTriangulo.setText(String.valueOf(formula.getArea()));
+            formula.formulaTrianIsosceles(num1, num2);
+            resultadoTriangulo.setText(String.valueOf(df.format(formula.getArea())));
         }
     }//GEN-LAST:event_calTrianguloActionPerformed
 
@@ -682,7 +787,9 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_b3TrianguloActionPerformed
 
     private void calcCirculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcCirculoActionPerformed
-        // TODO add your handling code here:
+        num1 = Integer.parseInt(valor1Circulo.getText());
+        formula.formulaCirculo(num1);
+        resultadoCirculo.setText(String.valueOf(df.format(formula.getArea())));
     }//GEN-LAST:event_calcCirculoActionPerformed
 
     private void comboTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTrianguloActionPerformed
@@ -693,6 +800,7 @@ public class formulario extends javax.swing.JFrame {
             isosceles.setVisible(false);
             imagenesTriangulo.add(rectangulo);
             rectangulo.setVisible(true);
+            valor2Triangulo.setEnabled(true);
             borrarStringTriangulo();
         }
         if (comboTriangulo.getSelectedIndex() == 1) {
@@ -702,6 +810,7 @@ public class formulario extends javax.swing.JFrame {
             isosceles.setVisible(false);
             imagenesTriangulo.remove(rectangulo);
             rectangulo.setVisible(false);
+            valor2Triangulo.setEnabled(false);
             borrarStringTriangulo();
 
         }
@@ -712,6 +821,7 @@ public class formulario extends javax.swing.JFrame {
             isosceles.setVisible(true);
             imagenesTriangulo.remove(rectangulo);
             rectangulo.setVisible(false);
+            valor2Triangulo.setEnabled(true);
             borrarStringTriangulo();
         }
     }//GEN-LAST:event_comboTrianguloActionPerformed
@@ -769,6 +879,7 @@ public class formulario extends javax.swing.JFrame {
     private javax.swing.JButton calcCirculo;
     private javax.swing.JComboBox<String> comboTriangulo;
     private javax.swing.JLabel equilatero;
+    private javax.swing.JPanel imagenesFormulas;
     private javax.swing.JPanel imagenesTriangulo;
     private javax.swing.JLabel isosceles;
     private javax.swing.JLabel jLabel1;
@@ -776,7 +887,14 @@ public class formulario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -786,6 +904,7 @@ public class formulario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel labelAreaCuadrado;
     private javax.swing.JLabel ladolabel1;
     private javax.swing.JPanel panelCirculo;
@@ -793,8 +912,10 @@ public class formulario extends javax.swing.JFrame {
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPanel panelTriangulo;
     private javax.swing.JLabel rectangulo;
+    private javax.swing.JTextField resultadoCirculo;
     private javax.swing.JTextField resultadoCuadrado;
     private javax.swing.JTextField resultadoTriangulo;
+    private javax.swing.JTextField valor1Circulo;
     private javax.swing.JTextField valor1Cuadrado;
     private javax.swing.JTextField valor1Triangulo;
     private javax.swing.JTextField valor2Triangulo;

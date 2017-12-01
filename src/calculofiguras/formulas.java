@@ -37,16 +37,20 @@ public class formulas {
 
     }
 
-    public void formulaTrianEquilatero(double alto, double base) {
+    public void formulaTrianEquilatero(double alto) {
 
-        area = ((base)*( Math.sqrt(Math.pow(altura, 2)-(Math.pow(base, 2) / 4))) / 2);
+        area = ((Math.sqrt(3) / 4) * (Math.pow(alto, 2)));
 
     }
 
-    public void formulaTrianIsosceles(int alto, int base) {
+    public void formulaTrianIsosceles(double alto, double base) {
 
-        area = (base * altura) / 2;
+        area = ((base) * (Math.sqrt(Math.pow(alto, 2) - (Math.pow(base, 2) / 4))) / 2);
 
+    }
+    
+    public void formulaCirculo(double radio){
+        area=pi*Math.pow(radio, 2);
     }
 
     //set
